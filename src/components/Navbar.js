@@ -40,7 +40,7 @@ class Navbar extends Component {
                                 <a className={`menuScreen ${this.state.navbarOpen ? " showMenu" : ""}`} onClick={this.handleToggle}></a>
                                 <ul className={`menuNav ${this.state.navbarOpen ? " showMenu" : ""}`}>
                                     <div className='p-4'>
-                                        <a className='w-25 d-flex justify-content-start' onClick={this.handleToggle}><i class="fa-solid fa-chevron-left"></i></a>
+                                        <a className='w-25 d-flex justify-content-start' onClick={this.handleToggle}><i className="fa-solid fa-chevron-left"></i></a>
                                     </div>
                                     <div className='h-100'>
                                         <li className='px-4'><Link onClick={this.handleToggle} to="/work">Work</Link></li>
