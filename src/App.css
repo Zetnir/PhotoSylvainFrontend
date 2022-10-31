@@ -66,6 +66,10 @@ body {
   color: var(--text-color);
 }
 
+.page-footer {
+  height: 200px;
+}
+
 .section {
   height: 100%;
   margin: 0 15% 0 15%;
@@ -179,25 +183,29 @@ a {
 
 .image-one {
   position: absolute;
-  top:0;
+  top:80;
   left:0;
   width: 100%;
   object-fit: cover;
   z-index: 6;
+  padding-top: 0px;
 }
 
 .image-one.full-screen {
-  height: 100%;
+  height: 90%;
 }
 
 .screen-image-one {
-  position:absolute;
-  top:0;
+  position: absolute;
+  top:80;
   left:0;
   width: 100%;
   object-fit: cover;
   z-index: 7;
+  padding-top: 0px;
 }
+
+.image-container 
 
 .screen-image-one p,h1 {
   padding-right: 60px;
