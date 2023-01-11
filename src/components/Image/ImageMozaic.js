@@ -1,24 +1,18 @@
-import React, { Component }  from 'react';
-import '../App.css';
+import React, { Component } from "react";
+import "../App.css";
 
 class ImageMozaic extends Component {
-    state = {
-    }
+  state = {};
 
-    constructor(props) {
-        super();
-    }
+  constructor(props) {
+    super();
+  }
 
-    componentDidMount() {
-    }
+  componentDidMount() {}
 
-
-
-    render() {
-        return (
-            <div>ImageOne</div>
-        );
-    }
+  render() {
+    return <div>ImageMozaic</div>;
+  }
 }
 
 export default ImageMozaic;

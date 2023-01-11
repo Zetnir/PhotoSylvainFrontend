@@ -1,43 +1,79 @@
-import React, { Component }  from 'react';
-import '../../App.css';
+import React, { Component } from "react";
+import "../../App.css";
 
-class ImageOne extends Component {
-    state = {
-        url: "/images/white_bikini.jpg"
-    }
+class ImageText extends Component {
+  defaultProps = {
+    height: 0,
+    text: "",
+    url: "",
+    heading: "",
+    preHeading: "",
+    headingSize: "",
+    preHeadingSize: "",
+    description: "",
+  };
 
-    defaultProps = {
-        borderSize: 0,
-        height: 0,
-        fullScreen: false,
-    }
+  state = {
+    seeMore: "see more >",
+  };
 
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    componentDidMount() {
-        console.log(this.props.height);
-    }
+  componentDidMount() {
+    console.log(this.props.height);
+  }
 
-
-
-    render() {
-        return (
-            <div>
-                <div style={{heigth: this.props.height - 80}}>
-                    <img 
-                        className={`image-one ${this.props.fullScreen ? " full-screen": ""}`} 
-                        src={this.state.url} 
-                        style={{height: this.props.height, paddingLeft: this.props.borderSize, paddingRight: this.props.borderSize}} 
-                    alt="Italian Trulli"/>
-                    <div className='d-flex flex-column-reverse align-items-start' style={{height: "90%"}}>
-                        <h1 style={{fontSize: "6vw"}}>SYBLS PHOTOGRAPHY</h1>
-                    </div>
-                </div>
+  render() {
+    return (
+      <>
+        {this.props.left ? (
+          <div className="d-flex">
+            <div
+              className="d-flex justify-content-center align-items-center"
+              style={{ overflow: "hidden", height: "800px", maxWidth: "800px" }}
+            >
+              <img
+                src={this.props.url}
+                style={{ objectFit: "contain", height: "100%" }}
+                alt="Italian Trulli"
+              />
             </div>
-        );
-    }
+            <div className="m-4 p-4 text-left d-flex flex-column justify-content-center">
+              <h1>{this.props.heading}</h1>
+              <p>{this.props.preHeading}</p>
+              <p>{this.props.description}</p>
+              <a className="text-dark" href="/work">
+                {this.state.seeMore}
+              </a>
+            </div>
+          </div>
+        ) : (
+          <div className="d-flex">
+            <div className="m-4 p-4 text-right d-flex flex-column justify-content-center">
+              <h1 className="text-right p-0">{this.props.heading}</h1>
+              <p>{this.props.preHeading}</p>
+              <p>{this.props.description}</p>
+              <a className="text-dark" href="/work">
+                {this.state.seeMore}
+              </a>
+            </div>
+            <div
+              className="d-flex justify-content-center align-items-center"
+              style={{ overflow: "hidden", height: "800px", maxWidth: "800px" }}
+            >
+              <img
+                src={this.props.url}
+                style={{ objectFit: "contain", height: "100%" }}
+                alt="Italian Trulli"
+              />
+            </div>
+          </div>
+        )}
+      </>
+    );
+  }
 }
 
-export default ImageOne;
+export default ImageText;
