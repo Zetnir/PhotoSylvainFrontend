@@ -24,7 +24,7 @@ class ImageMozaic extends Component {
       <div className="container section" style={{ overflow: "hidden" }}>
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className="d-flex">
-            <h1 className="text-center mx-2">{this.props.title1}</h1>
+            <h1 className="text-center mx-2 px-0">{this.props.title1}</h1>
             <h1 className="text-center text-effect p-0">{this.props.title2}</h1>
           </div>
           <div
