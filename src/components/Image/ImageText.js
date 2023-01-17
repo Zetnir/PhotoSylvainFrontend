@@ -29,7 +29,7 @@ class ImageText extends Component {
     return (
       <>
         {this.props.left ? (
-          <div className="d-flex">
+          <div className="d-flex flex-wrap">
             <div
               className="d-flex justify-content-center align-items-center"
               style={{ overflow: "hidden", height: "800px", maxWidth: "800px" }}
@@ -40,7 +40,10 @@ class ImageText extends Component {
                 alt="Italian Trulli"
               />
             </div>
-            <div className="m-4 p-4 text-left d-flex flex-column justify-content-center">
+            <div
+              className="m-4 p-4 text-left d-flex flex-column justify-content-center"
+              style={{ width: "600px" }}
+            >
               <h1>{this.props.heading}</h1>
               <p>{this.props.preHeading}</p>
               <p>{this.props.description}</p>
@@ -50,8 +53,11 @@ class ImageText extends Component {
             </div>
           </div>
         ) : (
-          <div className="d-flex">
-            <div className="m-4 p-4 text-right d-flex flex-column justify-content-center">
+          <div className="d-flex flex-wrap">
+            <div
+              className="m-4 p-4 text-right d-flex flex-column justify-content-center ml-auto"
+              style={{ width: "600px" }}
+            >
               <h1 className="text-right p-0">{this.props.heading}</h1>
               <p>{this.props.preHeading}</p>
               <p>{this.props.description}</p>

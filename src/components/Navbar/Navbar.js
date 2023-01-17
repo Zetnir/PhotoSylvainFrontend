@@ -25,21 +25,27 @@ class Navbar extends Component {
           <div className="row h-100">
             <div className="h-100 col-lg-2 col-md-6 col-sm-6 col">
               <div className="d-flex h-100 justify-content-start align-items-center">
-                <div className="px-2">
+                <div className="px-0">
                   <Link to="/">Home</Link>
                 </div>
               </div>
             </div>
             <div className="h-100 col-lg-10 col-md-6 col-sm-6 col">
               <div className="nav-bar d-flex h-100 justify-content-end align-items-center ">
-                <div className="px-4">
-                  <Link to="/work">Work</Link>
+                <div className="px-0">
+                  <a className="nav-link" href="/work">
+                    Work
+                  </a>
                 </div>
-                <div className="px-4">
-                  <Link to="/about">About</Link>
+                <div className="px-0">
+                  <a className="nav-link" href="/about">
+                    About
+                  </a>
                 </div>
-                <div className="px-4">
-                  <Link to="/contact">Contact</Link>
+                <div className="px-0">
+                  <a className="nav-link" href="/contact">
+                    Contact
+                  </a>
                 </div>
               </div>
               <div className="nav-menu d-flex h-100 justify-content-end align-items-center">

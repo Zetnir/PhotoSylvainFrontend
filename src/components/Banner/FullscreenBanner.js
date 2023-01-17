@@ -12,6 +12,7 @@ class FullscreenBanner extends Component {
     preHeading: "",
     preHeadingSize: "",
     buttonText: "",
+    link: "",
   };
 
   constructor(props) {
@@ -24,17 +25,17 @@ class FullscreenBanner extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ position: "relative" }}>
         <img
           src={this.props.url}
           style={{
             position: "absolute",
             width: "100%",
-            height: "100%",
+            height: "100vh",
             objectFit: "cover",
             zIndex: -1,
             filter: "brightness(90%)",
-            top: 0,
+            top: -80,
             left: 0,
           }}
           alt="Italian Trulli"
@@ -43,30 +44,30 @@ class FullscreenBanner extends Component {
           className="d-flex flex-column align-items-start justify-content-end"
           style={{
             height: "calc(100vh - 80px)",
-            padding: "80px 160px",
+            padding: "80px 250px",
           }}
         >
           <h1 style={{ fontSize: this.props.headingSize }}>
             {this.props.heading}
           </h1>
           <p
-            className="text-white"
-            style={{ fontSize: this.props.preHeadingSize }}
+            className="text-white text-left"
+            style={{ fontSize: this.props.preHeadingSize, width: "300px" }}
           >
             {this.props.preHeading}
           </p>
-          <button
-            className="p-3"
+          <a
+            className="p-0"
             style={{
-              border: "0px",
+              textDecoration: "underline",
+              cursor: "pointer",
+              color: "var(--secondary-color)",
+              textTransform: "capitalize",
             }}
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "/contact";
-            }}
+            href={this.props.link}
           >
-            {this.props.buttonText}
-          </button>
+            {this.props.buttonText} <i className="fas fa-chevron-right"></i>
+          </a>
         </div>
       </div>
     );
