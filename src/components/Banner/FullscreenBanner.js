@@ -29,17 +29,81 @@ class FullscreenBanner extends Component {
         <img
           src={this.props.url}
           style={{
-            position: "absolute",
+            position: "fixed",
             width: "100%",
             height: "100vh",
             objectFit: "cover",
             zIndex: -1,
             filter: "brightness(90%)",
-            top: -80,
+            top: 0,
             left: 0,
           }}
           alt="Italian Trulli"
         />
+        <div
+          className="d-flex justify-content-center align-items-center"
+          style={{
+            textOrientation: "mixed",
+            writingMode: "vertical-lr",
+            position: "absolute",
+            left: 0,
+            top: -80,
+            height: "100vh",
+          }}
+        >
+          <a
+            className="d-flex align-items-center justify-content-center nav-link"
+            href="https://www.facebook.com"
+            style={{ fontSize: "0.8em" }}
+          >
+            <img
+              src="/images/facebook-logo.png"
+              className="my-2"
+              style={{
+                height: "15px",
+                width: "15px",
+                transform: "rotate(90deg)",
+              }}
+            />
+            Facebook
+          </a>
+          <span className="dot"></span>
+          <a
+            className="d-flex align-items-center justify-content-center nav-link"
+            href="https://www.instagram.com"
+            style={{ fontSize: "0.8em" }}
+          >
+            {" "}
+            <img
+              className="my-2"
+              src="/images/instagram-logo.png"
+              style={{
+                height: "15px",
+                width: "15px",
+                transform: "rotate(90deg)",
+              }}
+            />
+            Instagram
+          </a>
+          <span className="dot"></span>
+          <a
+            className="d-flex align-items-center justify-content-center nav-link"
+            href="https://www.twitter.com"
+            style={{ fontSize: "0.8em" }}
+          >
+            {" "}
+            <img
+              className="my-2"
+              src="/images/twitter-logo.png"
+              style={{
+                height: "15px",
+                width: "15px",
+                transform: "rotate(90deg)",
+              }}
+            />
+            Twitter
+          </a>
+        </div>
         <div
           className="d-flex flex-column align-items-start justify-content-end"
           style={{

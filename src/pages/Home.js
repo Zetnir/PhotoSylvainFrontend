@@ -7,6 +7,7 @@ import ImageFullscreen from "../components/Banner/FullscreenBanner";
 import ImageMozaic from "../components/Image/ImageMozaic";
 import ImageOne from "../components/Image/ImageOne";
 import ImageText from "../components/Image/ImageText";
+import ProductList from "../components/Product/ProductList";
 
 class Home extends Component {
   render() {
@@ -28,7 +29,7 @@ class Home extends Component {
           height={"350px"}
           heading={"Photography Website"}
           headingSize={"7em"}
-          preHeading={"for the best of them all"}
+          preHeading={"about me"}
           preHeadingSize={"2em"}
           description={
             "The world without photography will be meaningless to us if there is no light and color, which opens up our minds and expresses passion. My photos are inspired by light, color, creative perspective, techniques & personalities."
@@ -58,34 +59,32 @@ class Home extends Component {
           preHeading={"for the best of them all"}
           preHeadingSize={"2em"}
         />
-        {/* <ImageText
-          url={"/images/white_bikini.jpg"}
-          heading={"Photography Website"}
-          preHeading={"for the best of them all"}
-          description={
-            "Blahblahblahblahblhah Blahblahblahblahblhah Blahblahblahblahblhah Blahblahblahblahblhah BlahblahblahblahblhahBlahblahblahblahblhahBlahblahblahblahblhah"
-          }
+        <div
+          className="d-flex justify-content-center align-items-center"
+          style={{ height: "100px", background: "var(--primary-bg-color)" }}
+        >
+          Mettre un truc ici
+        </div>
+        <ProductList
+          product1={{
+            title: "Wedding",
+            description: "",
+            link: "",
+            image: "/images/chuttersnap-2qlurUeoi3A-unsplash.jpg",
+          }}
+          product2={{
+            title: "Portrait",
+            description: "",
+            link: "",
+            image: "/images/pexels-dreamlens-production-2913125.jpg",
+          }}
+          product3={{
+            title: "Drone View",
+            description: "",
+            link: "",
+            image: "/images/guillaume-briard-AC-zGXaCTEk-unsplash.jpg",
+          }}
         />
-
-        <ImageText
-          url={"/images/white_bikini.jpg"}
-          heading={"Photography Website"}
-          preHeading={"for the best of them all"}
-          description={
-            "Blahblahblahblahblhah Blahblahblahblahblhah Blahblahblahblahblhah Blahblahblahblahblhah BlahblahblahblahblhahBlahblahblahblahblhahBlahblahblahblahblhah"
-          }
-          left={true}
-        />
-        <ButtonBanner
-          url={"/images/white_bikini.jpg"}
-          height={"350px"}
-          heading={"Photography Website"}
-          headingSize={"5em"}
-          preHeading={"for the best of them all"}
-          preHeadingSize={"2em"}
-          buttonText={"Book a meeting"}
-        /> */}
-
         <ImageMozaic
           title1={"Latest"}
           title2={"Works"}
@@ -117,10 +116,6 @@ class Home extends Component {
             },
             {
               url: "/images/giulio-magnifico-Iv20ib9rs-k-unsplash.jpg",
-              text: "Portrait",
-            },
-            {
-              url: "/images/guillaume-briard-AC-zGXaCTEk-unsplash.jpg",
               text: "Portrait",
             },
             {
@@ -156,10 +151,6 @@ class Home extends Component {
             {
               url: "/images/fons-heijnsbroek-wm9Kp0BPrMo-unsplash.jpg",
               text: "Paysage",
-            },
-            {
-              url: "/images/giulio-magnifico-Iv20ib9rs-k-unsplash.jpg",
-              text: "Portrait",
             },
             {
               url: "/images/guillaume-briard-AC-zGXaCTEk-unsplash.jpg",

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../../App.css";
-import "./ImageMozaic.css";
 
 class ImageMozaic extends Component {
   state = {};
@@ -21,7 +20,7 @@ class ImageMozaic extends Component {
 
   render() {
     return (
-      <div className="container section" style={{ overflow: "hidden" }}>
+      <div className="section" style={{ overflow: "hidden" }}>
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className="d-flex">
             <h1 className="text-center mx-2 px-0">{this.props.title1}</h1>

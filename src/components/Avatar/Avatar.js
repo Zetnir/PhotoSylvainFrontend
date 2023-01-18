@@ -36,10 +36,7 @@ class Avatar extends Component {
 
   render() {
     return (
-      <div
-        className="container section"
-        style={{ padding: "150px 100px 100px 100px" }}
-      >
+      <div className="section">
         <div className="d-flex flex-wrap">
           <div className="col col-5">
             <div style={{ maxHeight: "600px", aspectRatio: "1/1" }}>
@@ -69,8 +66,10 @@ class Avatar extends Component {
             <p className="py-4">{this.props.description}</p>
             <div className="d-flex align-items-center justify-content-center">
               <div className="d-flex flex-column align-items-center justify-content-center px-4 mx-4">
-                <h2 className="text-effect">{this.props.data.tab1.number}</h2>
-                <h3>{this.props.data.tab1.title}</h3>
+                <h1 className="text-effect p-0">
+                  {this.props.data.tab1.number}
+                </h1>
+                <h5>{this.props.data.tab1.title}</h5>
               </div>
               <div
                 className="my-4"
@@ -81,8 +80,10 @@ class Avatar extends Component {
                 }}
               ></div>
               <div className="d-flex flex-column align-items-center justify-content-center px-4 mx-4">
-                <h2 className="text-effect">{this.props.data.tab2.number}</h2>
-                <h3>{this.props.data.tab2.title}</h3>
+                <h1 className="text-effect p-0">
+                  {this.props.data.tab2.number}
+                </h1>
+                <h5>{this.props.data.tab2.title}</h5>
               </div>
               <div
                 className="my-4"
@@ -93,8 +94,10 @@ class Avatar extends Component {
                 }}
               ></div>
               <div className="d-flex flex-column align-items-center justify-content-center px-4 mx-4">
-                <h2 className="text-effect">{this.props.data.tab3.number}</h2>
-                <h3>{this.props.data.tab3.title}</h3>
+                <h1 className="text-effect p-0">
+                  {this.props.data.tab3.number}
+                </h1>
+                <h5>{this.props.data.tab3.title}</h5>
               </div>
             </div>
             <a
