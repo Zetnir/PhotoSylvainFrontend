@@ -24,12 +24,11 @@ class ImageMozaic extends Component {
 
     onImageSelect(e, index) {
         e.preventDefault();
-        console.log("select ");
+        this.changeShowed(true);
         this.setState({
-            ...this.state,
             selectedImage: index
         });
-        this.changeShowed(true);
+        console.log(this.state.selectedImage);
     }
 
     changeShowed(value) {
